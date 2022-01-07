@@ -1,33 +1,29 @@
 
-
-
-
-
-
-
 .preview {
   display: block;
   border: 1px solid #3c4043;
   border-radius: 8px;
   box-shadow: none;
+  background-color: transparent;
+  color: #bdc1c6;
   margin-bottom: 16px;
   display: flex;
   flex-direction: row;
   flex-grow: 1;
   padding-left: 16px;
   padding-right: 16px;
-  color: #8ab4f8;
-    text-decoration: none;
-    -webkit-tap-highlight-color: rgba(255,255,255,.10);
-
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
 }
+
 .preview-img{
   display: flex;
     justify-content: center;
     margin: 16px 0 16px 16px;
 }
 .image-container{
-  background-color: #111;
+  background-color: rgb(116, 116, 116);
     height: 112px;
     width: 112px;
 }
@@ -36,10 +32,10 @@
     width: 0;
     padding: 16px 0 40px;
     position: relative;
+    
 }
 .preview-source{
-  color: #bdc1c6;
-    font-family: arial,sans-serif;
+    
     font-size: 12px;
     line-height: 1.3333333333333333em;
     overflow: hidden;
@@ -56,8 +52,7 @@
   white-space: normal;
   font-size: 18px;
   line-height: 1.3333333333333333em;
-  color: #bdc1c6;
-    font-family: Roboto-Medium,sans-serif;
+  font-family: Roboto-Medium,sans-serif;
 }
 .preview-content{
   margin-top: 8px  ;
@@ -71,25 +66,60 @@
     -webkit-box-orient: vertical;
     white-space: normal;
 }
-.preview-button{
+.preview-date{
   position: absolute;
   left: -16px;
     bottom: 16px;
     padding: 0 16px;
+    color: #9aa0a6;
+    font-size: 12px;
+    line-height: 1.3333333333333333em;
 }
+.navi{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.button{
+  background-color: #9aa0a6;
+  border: 0px;
+  border-radius: 2px;
+}
+.navi-pagenum{
+  padding: 0 16px 0 16px;
+}
+
 
 
 .feed {
-  clear: both;
-  position: relative;
-  margin-left: 180px;
-  width: 652px;
-  font-size: medium;
+  padding-top: 100px;
+}
+.expand{
+  padding-top: 100px;
+}
+.expand-head{
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #3c4043;
+  font-size: 12px;
+  line-height: 1.3333333333333333em;
+  color: #9aa0a6;
+}
+.expand-title{
+  white-space: normal;
+  font-size: 20px;
+  line-height: 1.3333333333333333em;
   font-weight: normal;
-  line-height: 1.2;
+  font-family: Roboto-Medium,sans-serif;
+  color: #bdc1c6;
 }
 
 .app {
-  padding-top: 100px;
+  clear: both;
+  position: relative;
+  margin-left: 180px;
+  width: 652px;  
 }
 
