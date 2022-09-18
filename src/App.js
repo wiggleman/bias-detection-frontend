@@ -7,35 +7,16 @@ import qs from 'qs'
 function Feed(props){
   const news = props.news;
   
-  const [bias, setBias] = useState(Array(news.length).fill(3));
 
-  useEffect(()=>{
-    //setBias(Array(news.length).fill(3));
-    const queryID = [];
-      for (let i=0; i<news.length; i++) {
-        queryID.push(news[i].ID);
-      }
-    axios.get('http://localhost:5000/bias', {
-      params: {
-        query: queryID
-      },
-      paramsSerializer: params => qs.stringify(params, {arrayFormat: 'repeat'})
-    }).then(response => {
-      console.log("SUCCESS", response);
-      setBias(response.data) ;
-    }).catch(error => {
-      console.log(error);
-    });
-  },[] );
+
   const styles = [
     {backgroundColor: 'red'},
     {backgroundColor: 'green'},
     {backgroundColor: 'blue'},
     {backgroundColor: 'grey'},
   ];
-  console.log(bias);
   const listNews = news.map((article,index) =>
-    <button className="preview" style={styles[bias[index]]} onClick = {() => props.changeExpand((oldArray) => oldArray.concat(article))} key={article.title}>
+    <button className="preview" style={styles[article.bias]} onClick = {() => props.changeExpand((oldArray) => oldArray.concat(article))} key={article.title}>
       <div className="preview-text">
         <div className="preview-source">{article.source}</div>
         <div className="preview-title">{article.title}</div>
